@@ -7,7 +7,7 @@ game.BirdEntity = me.Entity.extend({
 
         this._super(me.Entity, 'init', [x, y, settings]);
         this.alwaysUpdate = true;
-        this.body.gravity = 9;
+        this.body.gravity = 0.2;
         this.maxAngleRotation = Number.prototype.degToRad(-30);
         this.maxAngleRotationDown = Number.prototype.degToRad(35);
         this.renderable.addAnimation("flying", [0, 1, 2]);
@@ -31,7 +31,7 @@ game.BirdEntity = me.Entity.extend({
         // collision shape
         this.collided = false;
 
-        this.gravityForce = 0.08;
+        this.gravityForce = 0.01;
     },
 
     update: function(dt) {
@@ -43,7 +43,7 @@ game.BirdEntity = me.Entity.extend({
         this.renderable.currentTransform.identity();
         if (me.input.isKeyPressed('fly')) {
             me.audio.play('wing');
-            this.gravityForce = 0.08;
+            this.gravityForce = 0.02;
             var currentPos = this.pos.y;
 
             this.angleTween.stop();
