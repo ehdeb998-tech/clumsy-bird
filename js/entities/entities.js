@@ -43,7 +43,7 @@ game.BirdEntity = me.Entity.extend({
         this.renderable.currentTransform.identity();
         if (me.input.isKeyPressed('fly')) {
             me.audio.play('wing');
-            this.gravityForce = 0.2;
+            this.gravityForce = 0.08;
             var currentPos = this.pos.y;
 
             this.angleTween.stop();
