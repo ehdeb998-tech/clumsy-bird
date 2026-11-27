@@ -31,7 +31,7 @@ game.BirdEntity = me.Entity.extend({
         // collision shape
         this.collided = false;
 
-        this.gravityForce = 0.2;
+        this.gravityForce = 0.08;
     },
 
     update: function(dt) {
