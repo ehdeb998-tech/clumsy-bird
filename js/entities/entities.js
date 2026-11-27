@@ -59,7 +59,7 @@ game.BirdEntity = me.Entity.extend({
             this.angleTween.start();
 
         } else {
-            this.gravityForce += 0.2;
+            this.gravityForce += 0.08; //0.2
             this.pos.y += me.timer.tick * this.gravityForce;
             this.currentAngle += Number.prototype.degToRad(3);
             if (this.currentAngle >= this.maxAngleRotationDown) {
